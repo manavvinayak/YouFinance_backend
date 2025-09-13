@@ -1,11 +1,10 @@
-require("dotenv").config({ path: "../.env" })
+require("dotenv").config({ path: ".env" })
 const express = require("express")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const cors = require("cors")
 const connectDB = require("./config/db")
 
-// Import routes
 const authRoutes = require("./routes/auth")
 const accountRoutes = require("./routes/accounts")
 const transactionRoutes = require("./routes/transactions")
@@ -19,7 +18,7 @@ const app = express()
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow frontend origin
+    origin: "https://you-finance-frontend.vercel.app/", // Allow frontend origin
     credentials: true, // Allow cookies to be sent
   }),
 )
