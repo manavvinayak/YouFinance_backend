@@ -3,12 +3,12 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const cors = require("cors")
-const connectDB = require("./config/db")
+const connectDB = require("../config/db")
 
-const authRoutes = require("./routes/auth")
-const accountRoutes = require("./routes/accounts")
-const transactionRoutes = require("./routes/transactions")
-const userRoutes = require("./routes/users")
+const authRoutes = require("../routes/auth")
+const accountRoutes = require("../routes/accounts")
+const transactionRoutes = require("../routes/transactions")
+const userRoutes = require("../routes/users")
 
 // Connect to database
 connectDB()
